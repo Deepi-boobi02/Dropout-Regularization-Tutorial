@@ -20,10 +20,10 @@ To understand why we need Dropout, we must understand the "Bias-Variance Tradeof
 ## 2. The Dataset
 We will use the "Make Circles" dataset from the Scikit-Learn library. This generates a large circle (Red class) containing a smaller inner circle (Blue class). This is a non-linear problem.
 
-![Hard Mode Dataset](circles_hard_mode.png)
+![Hard Mode Dataset]![alt text](circles_hard_mode.png-1.png)
 
 *Figure 1: The "Hard Mode" dataset with noise, designed to confuse the model.*
-![alt text](circles_hard_mode.png-1.png)
+
 ---
 
 ## 3. The Solution: Dropout Regularization
@@ -50,10 +50,10 @@ We trained two models for 200 epochs each:
 1.  **Model A (Overfitting):** No regularization.
 2.  **Model B (Dropout):** Added 50% Dropout layers.
 
-![Comparison of Results](results_comparison.png)
+![Comparison of Results]![alt text](circles_hard_mode.png-2.png)
 
 *Figure 2: Left = Overfitting (Test loss rises). Right = Regularized (Test loss stays low).*
-![alt text](circles_hard_mode.png-2.png)
+
 
 ### Analysis
 * **Without Dropout (Left):** The Orange line (Test Loss) begins to rise drastically after epoch 25. This proves the model is memorizing noise and failing on new data.
@@ -70,6 +70,7 @@ While Dropout is powerful, a Data Scientist might compare it against:
 
 ## 6. Conclusion
 In this tutorial, we demonstrated that adding Dropout layers is a simple yet highly effective method for improving Neural Network performance. By sacrificing some training capacity, we gained a model that generalizes better to new data.
+
 
 
 
